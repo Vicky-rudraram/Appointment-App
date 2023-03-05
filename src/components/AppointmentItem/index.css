@@ -1,0 +1,6 @@
+/* Write your CSS here */
+.bg1 {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #171f46;
+}

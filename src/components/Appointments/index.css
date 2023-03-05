@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.bg {
+  background-image: linear-gradient(#fbc7d4, #9796f0);
+  background-size: cover;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.card {
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+}
+
+.card1 {
+  display: flex;
+}
+
+.card3 {
+  display: flex;
+  justify-content: space-between;
+}
