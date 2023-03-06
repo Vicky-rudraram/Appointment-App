@@ -1,4 +1,5 @@
 // Write your code here
+import {format} from 'date-fns'
 
 import './index.css'
 
@@ -10,6 +11,8 @@ const AppointmentItem = props => {
     toggleIsStarred(id)
   }
 
+  const apptDate = format(appointmentDate, 'dd MMMM yyyy')
+
   const starImage = isStarred
     ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
@@ -18,7 +21,7 @@ const AppointmentItem = props => {
     <li className="bg1">
       <div>
         <p>{title}</p>
-        <p>{appointmentDate}</p>
+        <p>{apptDate}</p>
       </div>
 
       <button type="button" data-testid="star" onClick={onClickStar}>
