@@ -3,8 +3,6 @@ import {Component} from 'react'
 
 import {v4} from 'uuid'
 
-import {format} from 'date-fns'
-
 import './index.css'
 
 import AppointmentItem from '../AppointmentItem'
@@ -35,9 +33,8 @@ class Appointments extends Component {
   }
 
   changeDate = event => {
-    const newDate = format(new Date(event.target.value), 'dd MMMM yyyy, EEEE')
     this.setState({
-      dateInput: newDate,
+      dateInput: event.target.value,
     })
   }
 
