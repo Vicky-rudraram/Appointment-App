@@ -11,7 +11,7 @@ const AppointmentItem = props => {
     toggleIsStarred(id)
   }
 
-  const apptDate = format(appointmentDate, 'dd MMMM yyyy')
+  const formattedDate = format(new Date(appointmentDate), 'dd MMMM yyyy,EEEE')
 
   const starImage = isStarred
     ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
@@ -19,10 +19,8 @@ const AppointmentItem = props => {
 
   return (
     <li className="bg1">
-      <div>
-        <p>{title}</p>
-        <p>{apptDate}</p>
-      </div>
+      <p>{title}</p>
+      <p>Date:{formattedDate}</p>
 
       <button type="button" data-testid="star" onClick={onClickStar}>
         <img src={starImage} alt="star" />
